@@ -1,0 +1,26 @@
+
+"use client";
+// This file is intentionally left blank as its functionality
+// has been superseded by /src/app/admin/add-restaurant-with-menu/page.tsx
+// It is kept to prevent potential 404 errors if old links exist,
+// but it should ideally be removed if no longer referenced.
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function DeprecatedUploadMenuPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Redirect to the new page or admin dashboard
+    // This ensures that if anyone lands here, they are moved to a relevant place.
+    router.replace('/admin'); 
+  }, [router]);
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <p className="text-lg text-muted-foreground">Αυτή η σελίδα έχει μεταφερθεί.</p>
+      <p className="text-sm text-muted-foreground">Γίνεται ανακατεύθυνση...</p>
+    </div>
+  );
+}
